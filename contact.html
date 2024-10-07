@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navigation styling */
+        .thenav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #5e4b8b;
+            color: white;
+        }
+
+        .thenav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+        }
+
+        .thenav ul li {
+            margin: 0 15px;
+        }
+
+        .thenav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .thenav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .logo img.circle-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        /* Contact section styling */
+        #contact {
+            background-color: #f4f4f9;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        #contact h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #5e4b8b;
+        }
+
+        .contact-form {
+            display: inline-block;
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #5e4b8b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #4a3e70;
+        }
+
+        footer {
+            background-color: #5e4b8b;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="thenav">
+            <div class="logo">
+                <img src="purplelogo.jpeg" alt="Company Logo" class="circle-logo">
+            </div>
+            <div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form" action="submit_form.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2024 Company Name. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
