@@ -3,86 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing - Your Company Name</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        header {
-            background-color: #5e4b8b;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        th, td {
-            padding: 15px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #5e4b8b;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #e1e1e1;
-        }
-
-        .button {
-            background-color: #5e4b8b;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .button:hover {
-            background-color: #4a3b6c;
-        }
-    </style>
-     <link rel="stylesheet" href="styles.css">
+    <title>Pricing - School Lunch Boxes</title>
+    <link rel="stylesheet" href="pricing.css"/>
+    <link rel="stylesheet" href="body.css"/>
+    <link rel="stylesheet" href="header.css"/>
+    <link rel="stylesheet" href="footer.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
     <header>
+
         <nav class="thenav">
             <div class="logo">
                 <img src="purplelogo.jpeg" alt="Company Logo" class="circle-logo">
+                <h1>School Lunch Boxes</h1>
             </div>
-            <div>
+            <input type="checkbox" id="toggle-menu" class="toggle-menu" />
+            <label for="toggle-menu" class="hamburger">&#9776;</label>
+    
+            <div class="menu">
                 <ul>
+
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html">Services</a></li>
+                    <li><a href="index.html#services">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="index.html#testimonials">Reviews</a></li>
+
+
                 </ul>
             </div>
         </nav>
     </header>
-
-<section>
+<main>
+    <div class="hero">
+        <h1>Our Pricing</h1>
+    </div>
     <table>
         <thead>
             <tr>
@@ -95,35 +52,45 @@
             <tr>
                 <td>Standard Lunch Box</td>
                 <td>A balanced meal with a variety of options.</td>
-                <td>$5.00</td>
+                <td>PKR 500</td>
             </tr>
             <tr>
                 <td>Gourmet Lunch Box</td>
                 <td>Premium selection of gourmet ingredients.</td>
-                <td>$10.00</td>
+                <td>PKR 1000</td>
             </tr>
             <tr>
                 <td>Hot Lunch Delivery</td>
                 <td>Freshly cooked meals delivered hot.</td>
-                <td>$7.50</td>
+                <td>PKR 750</td>
             </tr>
             <tr>
                 <td>Picnic Package</td>
                 <td>A delightful assortment for your outdoor events.</td>
-                <td>$15.00</td>
+                <td>PKR 1500</td>
             </tr>
             <tr>
                 <td>Custom Lunch Box</td>
                 <td>Create your own meal from a selection of items.</td>
-                <td>$12.00</td>
+                <td>PKR 1200</td>
             </tr>
         </tbody>
     </table>
 
-    <div style="text-align: center; margin-top: 20px;">
+    <div class="contact">
         <a href="contact.html" class="button">Contact Us for More Details</a>
     </div>
-</section>
+</main>
+
+<footer id="footer">
+    <p>Follow us on social media</p>
+    <div class="social-media">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <p class="copy-right">&copy; 2024 School Lunch Boxes Multan. All rights reserved.</p>
+</footer>
 
 </body>
 </html>

@@ -1,0 +1,94 @@
+header {
+    background-color: #5e4b8b;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.thenav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.thenav h1 {
+    margin: 0 20px;
+}
+
+.circle-logo {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    border-radius: 50%; /* This makes it a perfect circle */
+    object-fit: cover; /* Ensures the image fits within the circle without distortion */
+}
+
+.hamburger {
+    display: none; /* Hidden on larger screens */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.toggle-menu {
+    display: none; /* Hide the checkbox */
+}
+
+/* Make the navigation responsive */
+@media screen and (max-width: 805px) {
+    .hamburger {
+        display: block; /* Show hamburger on small screens */
+        position: relative;
+        z-index: 10; /* Ensure hamburger icon stays on top */
+    }
+
+    .menu {
+        display: none; /* Hide the menu by default */
+        background-color: #5e4b8b; /* Same as header background */
+        width: 100%; /* Full width of the screen */
+        text-align: center;
+        position: absolute;
+        top: 100%; /* Position the menu below the header */
+        left: 0;
+        z-index: 9; /* Menu is below the hamburger */
+    }
+
+    .toggle-menu:checked + .hamburger + .menu {
+        display: block; /* Show the menu when checkbox is checked */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Ensure the header doesn't get covered */
+    .thenav {
+        position: relative; /* Keep header elements in place */
+    }
+}

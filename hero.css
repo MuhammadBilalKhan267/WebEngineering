@@ -1,0 +1,114 @@
+#hero {
+    position: relative;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    animation: fadeIn 0.5s ease-out; /* Fade in effect */
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensures video stays behind the content */
+}
+
+
+#hero h1 {
+    font-size: 2.5rem; /* Increased font size for prominence */
+    margin-bottom: 70px; /* Space below the heading */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Subtle text shadow for depth */
+}
+
+#hero button {
+    padding: 12px 24px; /* Adjusted padding for a larger button */
+    background-color: #5e4b8b; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Button font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for button */
+}
+
+#hero button:hover {
+    background-color: #4a3e70;
+    transform: translateY(-3px);
+}
+
+#hero h1, #hero button {
+    z-index: 1; /* Keep content above video */
+}
+
+.theflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Animation for the main text */
+.animated-text {
+    font-size: 5vw !important;
+    overflow-x: wrap;
+    color:#5e4b8b;
+}
+
+@media screen and (max-width: 1200px) {
+    .animated-text {
+        font-size: 6vw !important;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    .animated-text {
+        font-size: 8vw !important;
+    }
+    
+}
+
+/* Text swapping animation */
+.swap-text {
+    display: inline-block;
+    font-weight: bold;
+    color: #FFD700;
+    animation: swapFade 6s infinite ease-in-out;
+}
+
+/* Keyframes for the fade-in, fade-out effect */
+@keyframes swapFade {
+    0%, 33% {
+        opacity: 1;
+        content: "Freshness";
+    }
+    33%, 66% {
+        opacity: 0;
+        content: "Variety";
+    }
+    66%, 100% {
+        opacity: 1;
+        content: "Goodness";
+    }
+}
+
+/* Initial Animation for the Hero Section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Slide down effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

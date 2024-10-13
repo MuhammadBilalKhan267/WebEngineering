@@ -3,29 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services Company</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>School Lunch Boxes - Multan</title>
+
+    <link rel="stylesheet" href="body.css"/>
+    <link rel="stylesheet" href="header.css"/>
+    <link rel="stylesheet" href="hero.css"/>
+    <link rel="stylesheet" href="services.css"/>
+    <link rel="stylesheet" href="description.css"/>
+    <link rel="stylesheet" href="testimonials.css"/>
+    <link rel="stylesheet" href="footer.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
 
-                <nav class="thenav">
-                    <div class="logo">
-                        <img src="purplelogo.jpeg" alt="Company Logo" class="circle-logo">
-                    </div>
-                    <div>
-            <ul>
-
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="#testimonials">Reviews</a></li>
-
-
-            </ul>
-        </div>
+        <nav class="thenav">
+            <div class="logo">
+                <img src="purplelogo.jpeg" alt="Company Logo" class="circle-logo">
+                <h1>School Lunch Boxes</h1>
+            </div>
+            <input type="checkbox" id="toggle-menu" class="toggle-menu" />
+            <label for="toggle-menu" class="hamburger">&#9776;</label>
+    
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -36,15 +44,15 @@
         <video autoplay muted loop id="hero-video">
             <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
             <track src="descriptions_en.vtt" kind="descriptions" srclang="en" label="English">
-            <source src="istockphoto-1144067966-640_adpp_is.mp4" type="video/mp4">
+            <source src="main_video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="theflex">
-            <h1 class="animated-text" style="font-size: 5rem;">
-                Fueling Healthy Minds with <span class="highlight swap-text">Freshness, Variety, and Goodness</span> Delivered to Your Doorstep.
+            <h1 class="animated-text">
+                Fueling Healthy Minds with <span class="swap-text">Freshness, Variety, and Goodness</span> Delivered to Your Doorstep.
             </h1>
             
-            <button>Explore Our Services</button>
+            <a href="#services"><button>Explore Our Services</button></a>
         </div>
     </section>
     
@@ -55,7 +63,7 @@
         <div class="services-grid">
             <!-- Card 1: Gourmet Lunch Box -->
             <div class="service-card">
-                <img src="gormetbox.jpeg" alt="Gourmet Lunch Box" class="service-img">
+                <img src="gourmetbox.jpeg" alt="Gourmet Lunch Box" class="service-img">
                 <div class="service-content">
                     <h3>Gourmet Lunch Box</h3>
                     <p>Indulge in our gourmet lunch box with special treats like avocado rolls, carefully crafted for taste and nutrition.</p>
@@ -147,7 +155,7 @@
                 <p class="testimonial-text">“The lunch boxes are fresh and delicious. Deliveries are always on time and sorted efficiently for students and staff.”</p>
             </div>
             <div class="testimonial-item">
-                <img src="pic2.jpeg" alt="Client 2" class="testimonial-img">
+                <img src="pic2.jpg" alt="Client 2" class="testimonial-img">
                 <p class="testimonial-text">“Lunch boxes offer a unique and welcoming variety. It inspired me to think about improving customer relations.”</p>
             </div>
             <div class="testimonial-item">
@@ -160,13 +168,15 @@
     
 
     <footer id="footer">
-        <p>Company Information</p>
+        <p>Follow us on social media</p>
         <div class="social-media">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
+        <p class="copy-right">&copy; 2024 School Lunch Boxes Multan. All rights reserved.</p>
     </footer>
+    
     
 </body>
 </html>
