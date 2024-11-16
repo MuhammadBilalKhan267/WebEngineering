@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="testimonials.css"/>
     <link rel="stylesheet" href="footer.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <header>
@@ -31,6 +32,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="form.html">order</a></li>
                     <li><a href="#testimonials">Reviews</a></li>
                 </ul>
             </div>
@@ -60,53 +62,86 @@
 
     <section id="services">
         <h2>Explore Our Services</h2>
-        <div class="services-grid">
-            <!-- Card 1: Gourmet Lunch Box -->
+        <form id="add-service-form">
+            <label for="service-title">Service Title:</label>
+            <input type="text" id="service-title" required><br>
+    
+            <label for="service-desc">Service Description:</label>
+            <textarea id="service-desc" rows="3" required></textarea><br>
+    
+            <label for="service-img">Image URL:</label>
+            <input type="url" id="service-img" required><br>
+    
+            <button type="submit" class="btn">Add Service</button>
+            <button id="remove-last-item" type="button" class="btn">Remove Item</button>
+        </form>
+        <div id="services-grid">
             <div class="service-card">
                 <img src="gourmetbox.jpeg" alt="Gourmet Lunch Box" class="service-img">
                 <div class="service-content">
                     <h3>Gourmet Lunch Box</h3>
-                    <p>Indulge in our gourmet lunch box with special treats like avocado rolls, carefully crafted for taste and nutrition.</p>
+                    <p class="short-desc" data-full-desc="Indulge in our gourmet lunch box with special treats like avocado rolls, fruit bowls, and much more to satisfy your cravings.">
+                        <!-- Truncated version will be filled by JS -->
+                    </p>
+                    <button class="show-details-btn">Show Details</button>
                 </div>
             </div>
     
-            <!-- Card 2: Freshly Baked Bread & Breakfast -->
             <div class="service-card">
                 <img src="bread.jpeg" alt="Freshly Baked Bread & Breakfast" class="service-img">
                 <div class="service-content">
                     <h3>Freshly Baked Bread & Breakfast</h3>
-                    <p>Start your day right with our freshly baked bread and homemade porridge, available from 7am to 9am.</p>
+                    <p class="short-desc" data-full-desc="Start your day right with our freshly baked bread and homemade porridge, crafted to bring you warmth and energy.">
+                        <!-- Truncated version will be filled by JS -->
+                    </p>
+                    <button class="show-details-btn">Show Details</button>
                 </div>
             </div>
     
-            <!-- Card 3: Hot Lunches -->
             <div class="service-card">
                 <img src="hotlunch.jpeg" alt="Hot Lunches" class="service-img">
                 <div class="service-content">
                     <h3>Hot Lunches</h3>
-                    <p>Enjoy a variety of hot lunches that change daily, offering delicious and healthy meals for all.</p>
+                    <p class="short-desc" data-full-desc="Enjoy a variety of hot lunches that change daily, featuring fresh, locally sourced ingredients and global flavors.">
+                        <!-- Truncated version will be filled by JS -->
+                    </p>
+                    <button class="show-details-btn">Show Details</button>
                 </div>
             </div>
     
-            <!-- Card 4: Free Pickup & Drop-off -->
             <div class="service-card">
                 <img src="platter.jpeg" alt="Free Pickup & Drop-off" class="service-img">
                 <div class="service-content">
                     <h3>Free Pickup & Drop-off</h3>
-                    <p>We provide free, convenient pickup and drop-off services for all our meal packages.</p>
+                    <p class="short-desc" data-full-desc="We provide free, convenient pickup and drop-off services to ensure you never miss out on your favorite meals.">
+                        <!-- Truncated version will be filled by JS -->
+                    </p>
+                    <button class="show-details-btn">Show Details</button>
                 </div>
             </div>
     
-            <!-- Card 5: Picnic Packages -->
             <div class="service-card">
                 <img src="picnic.jpeg" alt="Picnic Packages" class="service-img">
                 <div class="service-content">
                     <h3>Picnic Packages</h3>
-                    <p>Plan your next event with us. We offer customized picnic packages for school trips and staff functions.</p>
+                    <p class="short-desc" data-full-desc="Plan your next event with our customized picnic packages, offering a range of delicious options to suit your taste.">
+                        <!-- Truncated version will be filled by JS -->
+                    </p>
+                    <button class="show-details-btn">Show Details</button>
                 </div>
             </div>
         </div>
     </section>
+    
+    <!-- Popup Structure -->
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <h3 id="popup-title"></h3>
+            <p id="popup-desc"></p>
+            <button id="hide-details-btn">Hide Details</button>
+        </div>
+    </div>
+    
     
     <section id="description">
         <h2 class="description-title">Why Choose School Lunch Boxes?</h2>
@@ -177,6 +212,6 @@
         <p class="copy-right">&copy; 2024 School Lunch Boxes Multan. All rights reserved.</p>
     </footer>
     
-    
+    <script src="script.js"></script>
 </body>
 </html>
