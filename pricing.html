@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="header.css"/>
     <link rel="stylesheet" href="footer.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style_edit_elements.css">
+    <script src="modify_sections.js"></script>
 </head>
 <body>
 
-    <header>
+    <header id="header">
 
         <nav class="thenav">
             <div class="logo">
@@ -29,6 +31,7 @@
                     <li><a href="index.html#services">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="#">Pricing</a></li>
+                    <li><a href="form.html">Order</a></li>
                     <li><a href="index.html#testimonials">Reviews</a></li>
 
 
@@ -36,50 +39,88 @@
             </div>
         </nav>
     </header>
-<main>
-    <div class="hero">
-        <h1>Our Pricing</h1>
+    <!-- Control Panel Widget -->
+    <div id="widget" onclick="toggleWidget()">
+        <div class="style-icon">⚙️</div>
+        <div id="options">
+        <button onclick="openBackgroundColorMenu(event)">Change Background</button>
+        <button onclick="openTextStyleMenu(event)">Change Text Style</button>
+        <button onclick="openResetStyleMenu(event)">Reset Styles</button>
+        </div>
     </div>
-    <table>
-        <thead>
-            <tr>
-                <th>Service</th>
-                <th>Description</th>
-                <th>Price</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Standard Lunch Box</td>
-                <td>A balanced meal with a variety of options.</td>
-                <td>PKR 500</td>
-            </tr>
-            <tr>
-                <td>Gourmet Lunch Box</td>
-                <td>Premium selection of gourmet ingredients.</td>
-                <td>PKR 1000</td>
-            </tr>
-            <tr>
-                <td>Hot Lunch Delivery</td>
-                <td>Freshly cooked meals delivered hot.</td>
-                <td>PKR 750</td>
-            </tr>
-            <tr>
-                <td>Picnic Package</td>
-                <td>A delightful assortment for your outdoor events.</td>
-                <td>PKR 1500</td>
-            </tr>
-            <tr>
-                <td>Custom Lunch Box</td>
-                <td>Create your own meal from a selection of items.</td>
-                <td>PKR 1200</td>
-            </tr>
-        </tbody>
-    </table>
+    
+    <!-- Hidden Menus -->
+    <div id="background-color-menu" class="style-menu hidden">
+        <label for="color-picker">Select Background Color:</label>
+        <input type="color" id="color-picker">
+        <label for="section-selector-bg">Choose Section:</label>
+        <select id="section-selector-bg"></select>
+        <button onclick="applyBackgroundColor()">Apply</button>
+    </div>
+    
+    <div id="text-style-menu" class="style-menu hidden">
+        <label for="font-style">Select Font Style:</label>
+        <select id="font-style">
+        <option value="italic">Italic</option>
+        <option value="bold">Bold</option>
+        <option value="underline">Underline</option>
+        <option value="none">None</option>
+        </select>
+        <label for="text-color">Select Text Color:</label>
+        <input type="color" id="text-color">
+        <label for="section-selector-text">Choose Section:</label>
+        <select id="section-selector-text"></select>
+        <button onclick="applyTextStyle()">Apply</button>
+    </div>
+    <div id="reset-style-menu" class="style-menu hidden">
+        <label for="reset-section-selector">Select Section:</label>
+        <select id="reset-section-selector"></select>
+        <button onclick="resetStyles()">Reset</button>
+    </div>
+<main id="content">
+        <div class="hero">
+            <h1>Our Pricing</h1>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Standard Lunch Box</td>
+                    <td>A balanced meal with a variety of options.</td>
+                    <td>PKR 500</td>
+                </tr>
+                <tr>
+                    <td>Gourmet Lunch Box</td>
+                    <td>Premium selection of gourmet ingredients.</td>
+                    <td>PKR 1000</td>
+                </tr>
+                <tr>
+                    <td>Hot Lunch Delivery</td>
+                    <td>Freshly cooked meals delivered hot.</td>
+                    <td>PKR 750</td>
+                </tr>
+                <tr>
+                    <td>Picnic Package</td>
+                    <td>A delightful assortment for your outdoor events.</td>
+                    <td>PKR 1500</td>
+                </tr>
+                <tr>
+                    <td>Custom Lunch Box</td>
+                    <td>Create your own meal from a selection of items.</td>
+                    <td>PKR 1200</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <div class="contact">
-        <a href="contact.html" class="button">Contact Us for More Details</a>
-    </div>
+        <div class="contact">
+            <a href="contact.html" class="button">Contact Us for More Details</a>
+        </div>
 </main>
 
 <footer id="footer">

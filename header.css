@@ -54,7 +54,7 @@ header nav ul li a {
 }
 
 /* Make the navigation responsive */
-@media screen and (max-width: 805px) {
+@media screen and (max-width: 900px) {
     .hamburger {
         display: block; /* Show hamburger on small screens */
         position: relative;

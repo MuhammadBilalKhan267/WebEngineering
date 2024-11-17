@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const phone = document.getElementById('phone').value;
         const phonePattern = /^[0-9]{11}$/; // Allow only 10 digit phone numbers
         if (!phone.match(phonePattern)) {
-            document.getElementById('phone-error').textContent = 'Phone number must contain 10 digits.';
+            document.getElementById('phone-error').textContent = 'Phone number must contain 11 digits.';
             isValid = false;
             errorMessage += 'Phone number must contain 11 digits.\n';
         }

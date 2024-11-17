@@ -1,0 +1,107 @@
+/* Widget and Menu Styling (Unchanged) */
+#widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #5e4b8b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+  
+  #widget:hover {
+    transform: scale(1.1);
+  }
+  
+  #widget .style-icon {
+    color: white;
+    font-size: 34px;
+    padding: 0 !important;
+    margin-top: 25% !important;
+  }
+  
+  #options {
+    display: none;
+    position: absolute;
+    bottom: 70px;
+    right: -10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 999;
+  }
+  
+  #options button {
+    display: block;
+    margin: 5px 0;
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5e4b8b;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #options button:hover {
+    background-color: #4a3e70;
+  }
+  
+  .style-menu {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+  }
+  
+  .style-menu.hidden {
+    display: none;
+  }
+  
+  .style-menu button {
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #5e4b8b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .style-menu button:hover {
+    background-color: #4a3e70;
+  }
+  
+  .style-icon {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+    .style-icon {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .style-icon {
+        font-size: 2rem;
+    }
+
+}

@@ -1,16 +1,18 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-
 h1 {
     text-align: center;
 }
 
+main {
+    margin-top: 30px;
+    padding: 50px;
+}
+
+main h1 {
+    color: #5e4b8b;
+}
+
 form {
-    width: 300px;
+    width: 700px;
     margin: 0 auto;
     padding: 20px;
     background-color: white;
@@ -35,7 +37,7 @@ input, select {
 }
 
 button {
-    background-color: #007bff;
+    background-color: #5e4b8b;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -45,7 +47,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #4a3e70;
 }
 
 .error {

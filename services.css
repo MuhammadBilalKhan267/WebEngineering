@@ -23,7 +23,7 @@
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    overflow: auto;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -33,17 +33,21 @@
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 25px #4a3e70;
 }
 
 .service-img {
     width: 100%;
+    min-height: 100px;
     height: 250px;
     object-fit: cover;
 }
 
 .service-content {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .service-content h3 {
@@ -54,6 +58,7 @@
 
 .service-content p {
     font-size: 1rem;
+    margin-bottom: 12px;
     color: #666;
 }
 /* Service form */
@@ -111,9 +116,9 @@
 /* Button styling */
 .btn {
     padding: 10px 20px; /* Comfortable button size */
-    background-color: #343a40; /* Dark gray background */
+    background-color: #5e4b8b; /* Dark gray background */
     color: #ffffff; /* White text */
-    border: 2px solid #343a40; /* Match border with background */
+    border: 2px solid #5e4b8b; /* Match border with background */
     border-radius: 8px; /* Rounded corners */
     font-size: 16px; /* Readable font size */
     font-weight: bold; /* Bold text */
@@ -123,12 +128,12 @@
 
 /* Button hover and active states */
 #add-service-form button[type="submit"]:hover {
-    background-color: #495057; /* Slightly lighter gray on hover */
+    background-color: #4a3e70; /* Slightly lighter gray on hover */
     transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 #add-service-form button[type="submit"]:active {
-    background-color: #212529; /* Darker gray on click */
+    background-color: #4a3e70; /* Darker gray on click */
     transform: scale(1); /* Reset size */
 }
 
@@ -183,7 +188,7 @@
 .popup button {
     margin-top: 20px;
     padding: 12px 20px;
-    background-color: #28a745; /* Greenish button color */
+    background-color: #5e4b8b; /* Greenish button color */
     color: white;
     font-size: 1em;
     border: none;
@@ -195,7 +200,7 @@
 
 /* Hover effect for the button */
 .popup button:hover {
-    background-color: #218838;
+    background-color: #4a3e70;
     transform: translateY(-2px); /* Slight elevation effect on hover */
 }
 
@@ -245,10 +250,8 @@ body.dimmed::before {
 /* Show details Button */
 
 .show-details-btn {
-    position: absolute;
-    bottom: 10px; /* Adjust as needed for spacing from the bottom */
-    left: 10px; /* Adjust as needed for spacing from the left */
-    background-color: #0056b3; /* Change to match your theme */
+    margin-top: auto; /* Pushes the button to the bottom */
+    background-color: #5e4b8b;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -256,9 +259,11 @@ body.dimmed::before {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    align-self: center; /* Center-align the button horizontally */
 }
+
 .show-details-btn:hover {
-    background-color: #e65c00; /* Slightly darker on hover */
+    background-color: #4a3e70;
 }
 
 
